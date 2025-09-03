@@ -1,6 +1,6 @@
 namespace Domain;
 
-class Author
+public class Author
 {
     public int Id { get; set; }
     public int IdBook { get; set; }
