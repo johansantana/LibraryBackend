@@ -21,6 +21,13 @@ dotnet build
 3. Ejecutar la API:
 
 ```bash
-Copy code
 dotnet run --project .\Api\Api.csproj
+```
+
+### Tests
+
+Para ejecutar los tests simplemente ejecutar:
+
+```bash
+dotnet test
 ```

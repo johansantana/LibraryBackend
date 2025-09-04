@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Clients\" />
+    <Folder Include="Repositories\" />
   </ItemGroup>
 
   <ItemGroup>
