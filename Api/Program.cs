@@ -11,6 +11,8 @@ builder.Services.AddSwaggerGen();
 // Inyección de dependencias
 builder.Services.AddHttpClient<BookRepository>();
 builder.Services.AddScoped<IBookService, BookService>();
+builder.Services.AddHttpClient<AuthorRepository>();
+builder.Services.AddScoped<IAuthorService, AuthorService>();
 
 var app = builder.Build();
 
