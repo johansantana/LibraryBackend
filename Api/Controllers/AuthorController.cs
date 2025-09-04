@@ -2,7 +2,7 @@ using Application.Interfaces;
 using Domain;
 using Microsoft.AspNetCore.Mvc;
 
-namespace LibraryApi.Controllers;
+namespace Api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]

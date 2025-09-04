@@ -14,6 +14,19 @@ builder.Services.AddScoped<IBookService, BookService>();
 builder.Services.AddHttpClient<AuthorRepository>();
 builder.Services.AddScoped<IAuthorService, AuthorService>();
 
+// Configurar Kestrel para usar puertos fijos
+builder.WebHost.ConfigureKestrel(options =>
+{
+    // Escuchar HTTP en el puerto 5000
+    options.ListenAnyIP(5000);
+
+    // Escuchar HTTPS en el puerto 5001 (usa el certificado por defecto del entorno)
+    options.ListenAnyIP(5001, listenOptions =>
+    {
+        listenOptions.UseHttps();
+    });
+});
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
